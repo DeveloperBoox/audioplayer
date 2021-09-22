@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="main">
+  	<p id="logo"><i class="fa fa-music"></i>음악 플레이어</p>
+
+
+    <!--- left part --->
+     <div class="left">
+
+      <!--- song img --->
+      <img id="track_image">
+         <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+
+     </div>
+ 
+
+     <!--- right part --->
+  	 <div class="right">
+
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">5</p>
+        </div>
+
+       <!--- song title & artist name --->
+      <p id="title">title.mp3</p>
+      <p id="artist">Artist name</p>
+
+      <!--- middle part --->
+  	 	<div class="middle">
+  	       <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+      	   <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+  	       <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+  	   </div>
+
+       <!--- song duration part --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+           <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+  	</div>
+
+
+  </div>
+   
+  <div class="footer">
+    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR vAlign=center align=center>
+        <TD style="background-color: red;"><HEIGHT=30 width="12" border="0"></TD>
+        <TD width="100%">
+        <P align=center>&nbsp;<B><A><h1 style="color: red;">공지사항</h1></A></B></P></TD>
+        <TD style="background-color: red;"><HEIGHT=30 width="8" border="0"></TD></TR>
+        <TR vAlign=top>
+        <TD>&nbsp;</TD>
+        <TD>
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+        <TD bgColor=#ffffff>
+        <MARQUEE onmouseover=this.stop() style="WIDTH: 100%; HEIGHT: 58px" onmouseout=this.start() scrollAmount=1 direction=up>
+        <DIV style="PADDING-RIGHT: 0px; OVERFLOW-Y: auto; PADDING-LEFT: 0px; OVERFLOW-X: hidden; PADDING-BOTTOM: 3px; WIDTH: 100%; PADDING-TOP: 3px">
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+        <TD vAlign=center width="100%">
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+        
+        <TD height=20>&nbsp;<h1>음악을 재생해주는 웹사이트입니다 !</h1></FONT></B></A></A></SPAN></TD></TR>
+        <TR>
+        <TD height=20>&nbsp;<h1>개발자는 Have 입니다.</h1></FONT></B></A></A></SPAN></TD></TR>
+        <TR>
+        <TD height=20>&nbsp;<h1>버그관련 문의는 psh20041220@gmail.com 로 주세요.</h1></FONT></B></A></A></SPAN></TD></TR>
+        <TR>
+        <TD height=20>&nbsp;<h1>본 웹사이트에서 발생하는 수익은 모두 원작자에게 돌아갑니다.</h1></FONT></B></A></A></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></MARQUEE></TD></TR></TBODY></TABLE></TD>
+        <TD>&nbsp;</TD></TR></TBODY></TABLE>
+    </div>
+    
+  <!--- Add javascript file --->
+  <script src="script.js"></script>
+
+</body>
+</html>
